@@ -47,7 +47,6 @@ const Pokemon: FC = () => {
   const [stats, setStats] = useState<statsType[]>([]);
   const [types, setTypes] = useState<types[]>([]);
   const [abilities, setAbilities] = useState<abilitiesType[]>([]);
-  const [myPokemons, setMyPokemons] = useState<[]>([]);
   const [moves, setMoves] = useState<movesType[]>([]);
   const [objSubmit, setObjSubmit] = useState<string>();
   const navigate = useNavigate();
@@ -56,7 +55,6 @@ const Pokemon: FC = () => {
   const params = useParams();
   const { name } = params;
   let data = {};
-  let index = 0;
   useEffect(() => {
     fetchData(), fetchForms();
   }, []);

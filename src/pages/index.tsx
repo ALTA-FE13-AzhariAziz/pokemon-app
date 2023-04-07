@@ -2,29 +2,20 @@ import Layout from "@/components/Layout";
 import { FC, useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-interface pagesType {
-  name: string;
-  url: string;
-}
-
-interface spritesType {
-  front_default: string;
-}
 
 interface pokemonType {
   name: string;
   img: string;
 }
 const Home: FC = () => {
-  const [datas, setDatas] = useState<pagesType[]>([]);
   const [dataPokemon, setDataPokemon] = useState<pokemonType[]>([]);
-  const img = document.querySelector("#display");
   const allPokemon: pokemonType[] = [];
   let offset = 0;
 
   useEffect(() => {
     fetchData();
     offset = 0;
+    localStorage.removeItem("offset");
     console.log(offset);
   }, []);
 

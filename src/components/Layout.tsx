@@ -1,6 +1,5 @@
 import { FC, ReactNode } from "react";
 
-import "@/styles/fonts/ARCADECLASSIC.ttf";
 import TopNavbar from "./TopNavbar";
 import BottomNavbar from "./BottomNavbar";
 
